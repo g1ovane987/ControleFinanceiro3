@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+			<table border="1" class = "table table-striped">
+					<thead class="table-info">
+						<tr>
+							<th>Data Movim.</a></th>
+							<th>Cliente/Fornecedor</a></th>
+							<th>Tipo</a></th>
+							<th>Valor</a></th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr th:each="rel : ${listaRelatorio}">
+						<td th:text="${rel.dt_movim}"></td>
+						<td th:text="${rel.nome_cliente}"></td>
+						<td th:text="${rel.tipoMovimento}"></td>
+						<td th:text="${rel.valor}"></td>
+				   </tr>
+				   </tbody>
+		    	</table>
+
+
+</body>
+
+</html>
